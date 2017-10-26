@@ -106,14 +106,23 @@ graph.createEdge('likes').link(
 
 //console.log(graph);
 
-
+console.log("trace the node inward.....................................................");
 console.log(
   graph.trace(
     graph.nodes('person').find('Sam'),
-    graph.nodes('node').find('E')
+    graph.nodes('node').find('E'), 1
+  ).prettify()
+) /// can't trace like this ????
+
+console.log("trace the node with no direction........................................");
+console.log(
+  graph.trace(
+    graph.nodes('person').find('Sam'),
+    graph.nodes('node').find('E'),
   ).prettify()
 )
 
+console.log("...........................................................................");
 console.log('Closest:');
 
 graph.closest(graph.nodes('person').find('Sam')).map(function(v) {
@@ -129,7 +138,7 @@ graph.fromJSON(graph.toJSON());
 graph.closest(graph.nodes('node').find('A')).map(function(v) {
   console.log(v.distance(), v.end().toString());
 });
-console.log("1.............................................................................");
+console.log("1 try options.............................................................................");
 let options = {                     //test using options for closest
   compare: function(node) {
     return node.entity === 'person';

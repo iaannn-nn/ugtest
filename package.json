@@ -7,7 +7,9 @@
   "engines": {
     "iojs": "2.2.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "csv": "^2.0.0"
+  },
   "devDependencies": {
     "chai": "~2.3.0",
     "mocha": "~2.2.4"
@@ -20,6 +22,5 @@
     "type": "git",
     "url": "https://github.com/keithwhor/UnitGraph.git"
   },
-  "author": "Keith Horwood",
   "license": "MIT"
 }
